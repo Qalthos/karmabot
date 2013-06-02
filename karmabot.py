@@ -48,6 +48,12 @@ class karmabot(IRCClient):
         elif msg.startswith(user + '--'):
             self.msg(channel, "{}--".format(user))
 
+        elif msg.startswith(user + '++'):
+            import random
+            adjective = random.choice(['stuck up', 'arrogant',
+                                       'self important', 'conceited'])
+            self.msg(channel, "{}: don't be {}...".format(user, adjective))
+
 
 class karmabotFactory(ReconnectingClientFactory):
     active_bot = None
