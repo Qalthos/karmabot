@@ -50,7 +50,7 @@ class karmabot(IRCClient):
 
         elif msg.startswith(user + '++'):
             import random
-            adjective = random.choice(['stuck up', 'arrogant',
+            adjective = random.choice(['stuck up', 'arrogant', 'pompous',
                                        'self important', 'conceited'])
             self.msg(channel, "{}: don't be {}...".format(user, adjective))
 
