@@ -54,6 +54,11 @@ class karmabot(IRCClient):
                                        'self important', 'conceited'])
             self.msg(channel, "{}: don't be {}...".format(user, adjective))
 
+        elif msg.startswith(self.nickname):
+            msg = msg.split(' ', 2)
+            if len(msg) > 1 and msg[1] == 'help':
+                self.msg(channel, '{}: {} is not here to help.'.format(user, self.nickname))
+
 
 class karmabotFactory(ReconnectingClientFactory):
     active_bot = None
