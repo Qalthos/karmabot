@@ -20,7 +20,7 @@ class karmabot(IRCClient):
     bot_name = "karmabot"
     channel = "#qalthos-test"
     versionNum = 1
-    sourceURL = "http://gitorious.com/~jlew"
+    sourceURL = "https://github.com/Qalthos/karmabot"
     lineRate = 1
 
     def signedOn(self):
